@@ -1,3 +1,8 @@
+//envoie le numero (i) de la chambre vers raspberry
+//reçois (vert) si (i) nécessite de rentrer dans la chambre
+//reçois (rouge) si (i) ne nécessite pas de rentrer dans la chambre
+//reçois (bleu) si (i) inconnu ou erreur
+
 #define Rouge A0
 #define Vert A1
 #define Bleu A2
