@@ -1,0 +1,29 @@
+#define Rouge A0
+#define Vert A1
+#define Bleu A2
+
+int i=42;   //emission numero de la chambre
+int message = 0;
+int couleurs [] = {Rouge, Vert, Bleu};
+
+void setup() {
+Serial.begin(9600);
+
+Serial.println (i); //emmission - i
+
+pinMode (Rouge, OUTPUT);
+pinMode (Vert, OUTPUT);
+pinMode (Bleu, OUTPUT);
+}
+
+void loop() {
+if (Serial.available()) {
+message = Serial.read() - '0';
+if (message>3)
+digitalWrite (couleurs [message-4], LOW);
+
+}
+else {
+digitalWrite (couleurs[message-1], HIGH);
+}
+}
