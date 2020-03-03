@@ -1,0 +1,13 @@
+import serial
+
+ser = serial.Serial('/dev/ttyXXXX', 9600)
+print("CTRL + C pour arrêter")
+
+while True :
+	led = int(input('Quelle LED souhaitez-vous allumer / eteindre ? (Rouge=1 / Vert=2 / Bleu=3)'))
+	action = input("Souhaitez-vous allumer ou Eteindre la LED ? (Allumer=1 / Eteindre=0)")
+	if (action == 1) :
+		ser.write(str(led))
+	else :
+		msg = led+3
+		ser.write(str(msg))
