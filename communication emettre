@@ -1,0 +1,14 @@
+int i=0;
+
+void setup() {
+Serial.begin(9600);
+Serial.println ("Un message va etre envoye toutrs les deux secondes des maintenant");
+
+}
+
+void loop() {
+Serial.println ("Message #" + String(i));
+delay(2000);
+i++;
+
+}
