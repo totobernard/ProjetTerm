@@ -15,7 +15,7 @@ void setup()
 void loop()
 {
 val=digitalRead(MMardui);//lis la valeur du signal envoyé par arduino
-if info(HIGH);
+if MMardui(HIGH);
 
 then D2(HIGH);//normalement ça fait monter le plateau sinn ça explose le rah c'est du 50/50
 D3(LOW);
